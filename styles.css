@@ -2,7 +2,7 @@
   color-scheme: light;
   font-family: system-ui, sans-serif;
   color: #24324a;
-  background: #eef3f8;
+  background: #3d41ff;
 }
 
 * {
@@ -21,13 +21,13 @@ body {
   width: min(100%, 30rem);
   padding: 2.5rem;
   border-radius: 1.25rem;
-  background: #ffffff;
+  background: #90c7ec;
   box-shadow: 0 1rem 3rem rgb(36 50 74 / 12%);
 }
 
 .eyebrow {
   margin: 0;
-  color: #4968db;
+  color: #ecedf0;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -42,7 +42,7 @@ h1 {
 
 .description {
   margin: 0 0 2rem;
-  color: #5f6b7d;
+  color: #0a0a0a;
 }
 
 form {
@@ -70,7 +70,7 @@ button {
   border: 0;
   padding: 0.9rem 1rem;
   color: #ffffff;
-  background: #4968db;
+  background: #081442;
   font-weight: 700;
   cursor: pointer;
 }
@@ -88,7 +88,7 @@ button:hover {
 .message {
   min-height: 1.5rem;
   margin: 1.5rem 0 0;
-  color: #30503b;
+  color: #0e0e0e;
   font-weight: 700;
 }
 

@@ -1,7 +1,7 @@
 function createGreeting(name) {
   const cleanName = name.trim();
   return cleanName
-    ? `¡Hola, ${cleanName}! Gracias por probar la aplicación.`
+    ? `Hola, ${cleanName} Gracias por probar la aplicación.`
     : "Por favor, escribe tu nombre.";
 }
 
