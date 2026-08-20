@@ -1,18 +1,27 @@
-function createGreeting(name) {
+function createGreeting(name, tone = "friendly") {
   const cleanName = name.trim();
-  return cleanName
-    ? `Hola, ${cleanName} Gracias por probar la aplicación.`
-    : "Por favor, escribe tu nombre.";
+  if (!cleanName) {
+    return "Por favor, escribe tu nombre.";
+  }
+
+  return tone === "formal"
+    ? `Bienvenido/a, ${cleanName}. Es un gusto recibirle.`
+    : `¡Hola, ${cleanName}! Gracias por probar la aplicación.`;
 }
 
 if (typeof document !== "undefined") {
   const form = document.querySelector("#greeting-form");
   const nameInput = document.querySelector("#name");
+  const toneInput = document.querySelector("#tone");
   const message = document.querySelector("#message");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    message.textContent = createGreeting(nameInput.value);
+    message.textContent = createGreeting(nameInput.value, toneInput.value);
+  });
+
+  form.addEventListener("reset", () => {
+    message.textContent = "";
   });
 }
 

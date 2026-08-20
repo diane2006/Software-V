@@ -13,9 +13,23 @@
       <p class="description">Escribe tu nombre para recibir un saludo.</p>
 
       <form id="greeting-form">
-        <label for="name">Nombre</label>
-        <input id="name" name="name" type="text" placeholder="Ejemplo: Ana" autocomplete="name">
-        <button type="submit">Mostrar mensaje</button>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Ejemplo: Ana" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="tone">Tipo de saludo</label>
+          <select id="tone" name="tone">
+            <option value="friendly">Amigable</option>
+            <option value="formal">Formal</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Mostrar saludo</button>
+          <button class="secondary" type="reset">Limpiar</button>
+        </div>
       </form>
 
       <p id="message" class="message" role="status" aria-live="polite"></p>
