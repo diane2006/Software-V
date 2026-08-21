@@ -1,4 +1,4 @@
-# Reto Coclé - Software V
+#Software V
 
 Aplicación interactiva con saludo personalizado y una trivia sobre la historia del Centro Regional de Coclé de la Universidad Tecnológica de Panamá.
 
