@@ -21,10 +21,9 @@ main
 
 ## Ejecución
 
-Abre `index.html` en un navegador web.
+Abre index.html en un navegador web.
 
 ## Comprobación
 
-```bash
 node --test test.js
-```
+
