@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+
     <main class="quiz-shell">
       <aside class="intro-panel">
         <div class="brand">
@@ -69,6 +70,33 @@
           <a href="https://cc.utp.ac.pa/antecedentes" target="_blank" rel="noopener noreferrer">antecedentes oficiales de UTP Coclé</a>.
         </footer>
       </section>
+=======
+    <main class="card">
+      <p class="eyebrow">Desarrollo de Software V</p>
+      <h1>Mi primera aplicación</h1>
+      <p class="description">Escribe tu nombre para recibir un saludo.</p>
+
+      <form id="greeting-form">
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Ejemplo: Ana" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="tone">Tipo de saludo</label>
+          <select id="tone" name="tone">
+            <option value="friendly">Amigable</option>
+            <option value="formal">Formal</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Mostrar saludo</button>
+          <button class="secondary" type="reset">Limpiar</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
     </main>
 
     <noscript>Activa JavaScript para comenzar la trivia.</noscript>

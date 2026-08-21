@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+
   --ink: #172033;
   --navy: #182651;
   --blue: #3655bd;
@@ -13,6 +14,10 @@
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   color: var(--ink);
   background: #e7ebf4;
+  font-family: system-ui, sans-serif;
+  color: #25263a;
+  background: #171a3a;
+
 }
 
 * {
@@ -31,6 +36,7 @@ body {
     linear-gradient(90deg, rgb(24 38 81 / 5%) 1px, transparent 1px);
   background-size: 36px 36px;
 }
+
 
 button,
 a {
@@ -87,6 +93,22 @@ button {
   gap: 0.8rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.66rem;
+
+.card {
+  width: min(100%, 30rem);
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border-top: 0.5rem solid #b13a43;
+  background: #fdfbf7;
+  box-shadow: 0 1.5rem 4rem rgb(7 8 28 / 35%);
+}
+
+.eyebrow {
+  margin: 0;
+  color: #9b3039;
+  font-family: ui-monospace, monospace;
+  font-size: 0.8rem;
+
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.08em;
@@ -128,6 +150,7 @@ button {
 }
 
 h1 {
+
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(4rem, 9vw, 6.5rem);
@@ -147,6 +170,27 @@ h1 em {
   color: #dce3ff;
   font-size: 0.95rem;
   line-height: 1.65;
+
+  margin: 0.5rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1;
+}
+
+.description {
+  margin: 0 0 2rem;
+  color: #65677d;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+
 }
 
 .greeting-form {
@@ -165,6 +209,7 @@ h1 em {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 
 .greeting-controls {
   display: grid;
@@ -296,6 +341,29 @@ h1 em {
   gap: 1rem;
   color: #65708a;
   font-size: 0.72rem;
+
+input,
+select,
+button {
+  width: 100%;
+  border-radius: 0.7rem;
+  font: inherit;
+}
+
+input,
+select {
+  border: 1px solid #c9c6d3;
+  padding: 0.85rem 1rem;
+  color: #25263a;
+  background: #ffffff;
+}
+
+button {
+  border: 0;
+  padding: 0.9rem 1rem;
+  color: #ffffff;
+  background: #a9363d;
+
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -416,6 +484,7 @@ h2 {
   background: #fff1f1;
 }
 
+
 .answer-button.is-wrong span {
   color: var(--white);
   background: var(--red);
@@ -489,6 +558,40 @@ a:focus-visible {
 
 .result-score span {
   color: #6a7692;
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f0aa3c;
+  outline-offset: 3px;
+}
+
+button:hover {
+  background: #892a32;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.secondary {
+  border: 1px solid #25263a;
+  color: #25263a;
+  background: transparent;
+}
+
+.secondary:hover {
+  color: #ffffff;
+  background: #25263a;
+}
+
+.message {
+  min-height: 1.5rem;
+  margin: 1.5rem 0 0;
+  color: #24634f;
+
   font-weight: 700;
 }
 
@@ -541,6 +644,7 @@ noscript {
     padding: 1.5rem;
   }
 
+
   .intro-copy {
     margin-top: 2.5rem;
   }
@@ -586,4 +690,9 @@ noscript {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
 }
