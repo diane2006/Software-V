@@ -3,24 +3,75 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera aplicación</title>
+    <meta name="description" content="Trivia sobre la historia del Centro Regional de Coclé de la Universidad Tecnológica de Panamá.">
+    <title>Reto Coclé | Trivia UTP</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="card">
-      <p class="eyebrow">Desarrollo de Software V</p>
-      <h1>Mi primera aplicación</h1>
-      <p class="description">Escribe tu nombre para recibir un saludo.</p>
+    <main class="quiz-shell">
+      <aside class="intro-panel">
+        <div class="brand">
+          <span class="brand-mark">UTP</span>
+          <span>Centro Regional<br>de Coclé</span>
+        </div>
 
-      <form id="greeting-form">
-        <label for="name">Nombre</label>
-        <input id="name" name="name" type="text" placeholder="Ejemplo: Ana" autocomplete="name">
-        <button type="submit">Mostrar mensaje</button>
-      </form>
+        <div class="intro-copy">
+          <p class="eyebrow">Desarrollo de Software V</p>
+          <h1>Reto<br><em>Coclé</em></h1>
+          <p class="intro-text">Preséntate y luego recorre la historia del campus que compartimos.</p>
 
-      <p id="message" class="message" role="status" aria-live="polite"></p>
+          <form id="greeting-form" class="greeting-form">
+            <label for="name">Tu nombre</label>
+            <div class="greeting-controls">
+              <input id="name" name="name" type="text" placeholder="Ejemplo: Ana" autocomplete="name">
+              <button type="submit">Mostrar mensaje</button>
+            </div>
+            <p id="message" class="message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="orbit" aria-hidden="true">
+          <span>1976</span>
+        </div>
+
+        <p class="quiz-meta"><strong>5</strong> preguntas <span></span> <strong>1</strong> campus</p>
+      </aside>
+
+      <section class="quiz-panel" aria-labelledby="question">
+        <div id="quiz-view">
+          <header class="progress-header">
+            <p id="progress-label">Pregunta 1 de 5</p>
+            <p id="score-label">0 puntos</p>
+          </header>
+          <progress id="progress" max="5" value="1">1 de 5</progress>
+
+          <div class="question-block">
+            <p id="question-category" class="question-category">Nuestra historia</p>
+            <h2 id="question"></h2>
+          </div>
+
+          <div id="answers" class="answers" aria-label="Opciones de respuesta"></div>
+
+          <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+          <button id="next-button" class="primary-button" type="button" hidden>Siguiente pregunta</button>
+        </div>
+
+        <div id="result-view" class="result-view" hidden>
+          <p class="question-category">Recorrido completado</p>
+          <div class="result-score"><strong id="final-score">0</strong><span>/ 5</span></div>
+          <h2 id="result-title"></h2>
+          <p>Ya conoces un poco más del Centro Regional que inició su historia en 1976.</p>
+          <button id="restart-button" class="primary-button" type="button">Intentar de nuevo</button>
+        </div>
+
+        <footer class="source-note">
+          Datos verificados en los
+          <a href="https://cc.utp.ac.pa/antecedentes" target="_blank" rel="noopener noreferrer">antecedentes oficiales de UTP Coclé</a>.
+        </footer>
+      </section>
     </main>
 
+    <noscript>Activa JavaScript para comenzar la trivia.</noscript>
     <script src="script.js"></script>
   </body>
 </html>
